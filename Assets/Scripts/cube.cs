@@ -33,7 +33,8 @@ public class cube : MonoBehaviour
     IEnumerator remove_cube()
     {
       yield return new WaitForSeconds(1);
-      object_pooler.instance.Return_to_Pool(this.gameObject);
+      multiple_object_pooling.instance.Return_to_Pool("cube",this.gameObject);
+      //Destroy(this.gameObject,2f);
     }
 
 }
